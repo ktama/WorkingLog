@@ -20,9 +20,13 @@ namespace WorkingLog
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowViewModel myMainWindowViewModel = null;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = (this.myMainWindowViewModel = new MainWindowViewModel());
         }
     }
 }
