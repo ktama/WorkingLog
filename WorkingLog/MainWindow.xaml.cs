@@ -27,6 +27,7 @@ namespace WorkingLog
             InitializeComponent();
 
             this.DataContext = (this.myMainWindowViewModel = new MainWindowViewModel());
+            //this.WorkLogDataGrid.ItemsSource = myMainWindowViewModel.MyLogManager.MyWorkLogCollection;
         }
     }
 }

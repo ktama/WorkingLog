@@ -11,7 +11,15 @@ namespace WorkingLog
     {
         private LogManager myLogManager = new LogManager();
 
-        public LogManager MyLogManager { get => myLogManager; set => myLogManager = value; }
+        public LogManager MyLogManager
+        {
+            get => myLogManager;
+            set
+            {
+                myLogManager = value;
+                OnPropertyChanged(nameof(MyLogManager));
+            }
+        }
 
         // nullチェックを省略するためdelegateであらかじめイベントを登録しておく
         public event PropertyChangedEventHandler PropertyChanged = delegate { };

@@ -6,6 +6,15 @@
         xmlns:local="clr-namespace:WorkingLog"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <DataGrid Name="WorkLogDataGrid" ItemsSource="{Binding MyLogManager}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="カテゴリ" Binding="{Binding Category}"/>
+                <DataGridTextColumn Header="サブカテゴリ" Binding="{Binding SubCategory}"/>
+                <DataGridTextColumn Header="開始時間" Binding="{Binding StartTime}"/>
+                <DataGridTextColumn Header="終了時間" Binding="{Binding EndTime}"/>
+                <DataGridTextColumn Header="経過時間" Binding="{Binding WorkSpan}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
 </Window>
